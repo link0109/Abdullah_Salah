@@ -222,14 +222,32 @@ function sendToWhatsApp() {
     const type = document.getElementById('session-type').value;
     const date = document.getElementById('session-date').value;
     const time = document.getElementById('session-time').value;
-    if(!type || !date || !name) { alert("من فضلك كمل البيانات الأول يا فندم"); return; }
+
+    if(!type || !date || !name) { 
+        alert("من فضلك كمل البيانات الأول يا فندم"); 
+        return; 
+    }
     
-    let msg = `استفسار عن حجز جديد:\nالاسم: ${name}\nالمناسبة: ${type}\nالتاريخ: ${date}`;
-    if(type === "كتب كتاب في البيت (Katb Ktab)") { msg += `\nالموعد: ${time}`; }
+    // تنسيق التاريخ لتقويم جوجل
+    const cleanDate = date.replace(/-/g, '');
+    const eventTitle = encodeURIComponent(`حجز: ${type} - ${name}`);
+    const googleCalendarLink = `https://www.google.com/calendar/render?action=TEMPLATE&text=${eventTitle}&dates=${cleanDate}/${cleanDate}&details=حجز_مؤكد_عبدالله_صلاح`;
+
+    let msg = `*استفسار عن حجز جديد* 📸\n\n`;
+    msg += `👤 *الاسم:* ${name}\n`;
+    msg += `📅 *المناسبة:* ${type}\n`;
+    msg += `🗓️ *التاريخ:* ${date}\n`;
+    
+    if(type === "كتب كتاب في البيت (Katb Ktab)") { 
+        msg += `🕒 *الموعد:* ${time}\n`; 
+    }
+
+    msg += `\n🔗 *إضافة للتقويم مباشرة:* \n${googleCalendarLink}`;
     
     window.open(`https://wa.me/201104249171?text=${encodeURIComponent(msg)}`, '_blank');
     closeBooking();
 }
+
 
 function makeVFCashCall() {
     let amount = document.getElementById('cash-amount').value;
