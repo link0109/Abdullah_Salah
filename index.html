@@ -227,26 +227,21 @@ function sendToWhatsApp() {
         alert("من فضلك كمل البيانات الأول يا فندم"); 
         return; 
     }
-    
-    // تنسيق التاريخ لتقويم جوجل
-    const cleanDate = date.replace(/-/g, '');
-    const eventTitle = encodeURIComponent(`حجز: ${type} - ${name}`);
-    const googleCalendarLink = `https://www.google.com/calendar/render?action=TEMPLATE&text=${eventTitle}&dates=${cleanDate}/${cleanDate}&details=حجز_مؤكد_عبدالله_صلاح`;
 
-    let msg = `*استفسار عن حجز جديد* 📸\n\n`;
-    msg += `👤 *الاسم:* ${name}\n`;
-    msg += `📅 *المناسبة:* ${type}\n`;
-    msg += `🗓️ *التاريخ:* ${date}\n`;
-    
+    // كتابة التاريخ بتنسيق (السنة/الشهر/اليوم) بيساعد الموبايل يتعرف عليه كحدث تقويم
+    let msg = `استفسار عن حجز جديد:\n`;
+    msg += `الاسم: ${name}\n`;
+    msg += `المناسبة: ${type}\n`;
+    msg += `التاريخ: ${date}`; // الموبايل هيظهر ده كلينك بمجرد ما الرسالة توصل
+
     if(type === "كتب كتاب في البيت (Katb Ktab)") { 
-        msg += `🕒 *الموعد:* ${time}\n`; 
+        msg += `\nالموعد: ${time}`; 
     }
-
-    msg += `\n🔗 *إضافة للتقويم مباشرة:* \n${googleCalendarLink}`;
     
     window.open(`https://wa.me/201104249171?text=${encodeURIComponent(msg)}`, '_blank');
     closeBooking();
 }
+
 
 
 function makeVFCashCall() {
