@@ -228,19 +228,26 @@ function sendToWhatsApp() {
         return; 
     }
 
-    // كتابة التاريخ بتنسيق (السنة/الشهر/اليوم) بيساعد الموبايل يتعرف عليه كحدث تقويم
-    let msg = `استفسار عن حجز جديد:\n`;
-    msg += `الاسم: ${name}\n`;
-    msg += `المناسبة: ${type}\n`;
-    msg += `التاريخ: ${date}`; // الموبايل هيظهر ده كلينك بمجرد ما الرسالة توصل
+    // تنسيق التاريخ ليظهر كرابط تقويم تلقائي في الموبايل
+    const displayDate = new Date(date).toLocaleDateString('ar-EG', {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric'
+    });
+
+    let msg = `*استفسار عن حجز جديد* 📸\n\n`;
+    msg += `👤 *الاسم:* ${name}\n`;
+    msg += `📅 *المناسبة:* ${type}\n`;
+    msg += `🗓️ *التاريخ:* ${date}\n`; // هذا السطر بتنسيق YYYY-MM-DD يسهل على الموبايل التعرف عليه
 
     if(type === "كتب كتاب في البيت (Katb Ktab)") { 
-        msg += `\nالموعد: ${time}`; 
+        msg += `🕒 *الموعد:* ${time}\n`; 
     }
     
     window.open(`https://wa.me/201104249171?text=${encodeURIComponent(msg)}`, '_blank');
     closeBooking();
 }
+
 
 
 
