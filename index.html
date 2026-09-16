@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080808">
+<meta name="description" content="المقدم فوتوغرافر | ELMOKADEM Photography">
+<title>المقدم فوتوغرافر | ELMOKADEM Photography</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header id="navbar">
+<a class="brand" href="#home"><b>ELMOKADEM</b><small>Photography</small></a>
+<nav id="navLinks"><a href="#home">الرئيسية</a><a href="#portfolio">أعمالي</a><a href="#services">الخدمات</a><a href="#reviews">آراء العملاء</a><a href="#contact">تواصل</a></nav>
+<button class="nav-book" onclick="openBooking()">احجز الآن</button><button class="menu" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
+</header>
+
+<main>
+<section class="hero" id="home">
+<div class="hero-bg"></div><div class="hero-shade"></div>
+<div class="hero-content reveal">
+<div class="eyebrow">ELMOKADEM PHOTOGRAPHY</div>
+<div class="arabic-title">المقدم فوتوغرافر</div>
+<h1>نخلّي اللحظة<br><em>ذكرى تعيش.</em></h1>
+<p>تصوير زفاف • خطوبة • كتب كتاب • سيشنات<br>بأسلوب يهتم بالتفاصيل والمشاعر قبل الصورة.</p>
+<div class="actions"><button class="gold" onclick="openBooking()">احجز موعدك <i class="fa-solid fa-arrow-left"></i></button><a class="outline" href="#portfolio">شوف أعمالي <i class="fa-solid fa-images"></i></a></div>
+<div class="socials"><a href="https://www.instagram.com/elmokadem_ph" target="_blank"><i class="fa-brands fa-instagram"></i></a><a href="https://www.facebook.com/share/1AsaePx6C3/?mibextid=wwXIfr" target="_blank"><i class="fa-brands fa-facebook-f"></i></a><a href="https://www.tiktok.com/@elmokadem.photographar" target="_blank"><i class="fa-brands fa-tiktok"></i></a><a href="https://wa.me/201210425901" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></div>
+</div></section>
+
+<section class="section intro"><div class="head reveal"><span>MY STYLE</span><h2>الصورة مش مجرد صورة.</h2><p>كل لحظة ليها إحساسها، ودوري إني أحفظ الإحساس ده في صورة ترجعلك نفس الشعور كل مرة تشوفها.</p></div>
+<div class="stats"><div><b>01</b><span>تفاصيل<br>بتفرق</span></div><div><b>02</b><span>صور طبيعية<br>بدون مبالغة</span></div><div><b>03</b><span>تواصل مباشر<br>وسهل</span></div><div><b>04</b><span>ذكريات<br>تفضل معاك</span></div></div></section>
+
+<section class="section" id="portfolio"><div class="head reveal"><span>SELECTED WORK</span><h2>من أجمل اللحظات</h2><p>مجموعة مختارة من أجواء الزفاف والخطوبة والسيشنات.</p></div>
+<div class="gallery">
+<figure class="tall reveal"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1100&q=85"><figcaption>Wedding<br><b>فرحة تستاهل تتوثق</b></figcaption></figure>
+<figure class="reveal"><img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=1000&q=85"><figcaption>Couple<br><b>تفاصيل صغيرة.. إحساس كبير</b></figcaption></figure>
+<figure class="reveal"><img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1000&q=85"><figcaption>Session<br><b>لحظة على طبيعتها</b></figcaption></figure>
+<figure class="wide reveal"><img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&w=1400&q=85"><figcaption>Wedding Story<br><b>كل ثانية لها حكاية</b></figcaption></figure>
+<figure class="reveal"><img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1000&q=85"><figcaption>Details<br><b>الجمال في التفاصيل</b></figcaption></figure>
+</div></section>
+
+<section class="section services" id="services"><div class="head reveal"><span>SERVICES</span><h2>أصوّر مناسبتك زي ما تتمنى</h2></div>
+<div class="service-grid">
+<article class="service reveal"><i class="fa-solid fa-ring"></i><small>01</small><h3>زفاف وخطوبة</h3><p>تغطية لحظات الفرح من التحضيرات لأهم التفاصيل واللحظات العفوية.</p><button onclick="openBooking('سيشن زفاف')">احجز الخدمة ←</button></article>
+<article class="service reveal"><i class="fa-solid fa-heart"></i><small>02</small><h3>كتب كتاب</h3><p>صور هادئة وطبيعية توثق اليوم بكل مشاعره وتفاصيله.</p><button onclick="openBooking('سيشن كتب كتاب')">احجز الخدمة ←</button></article>
+<article class="service reveal"><i class="fa-solid fa-camera-retro"></i><small>03</small><h3>سيشنات</h3><p>سيشنات كاجوال ومميزة تناسب شخصيتك وتطلع صورك بشكل طبيعي.</p><button onclick="openBooking('سيشن كاجول')">احجز الخدمة ←</button></article>
+<article class="service reveal"><i class="fa-solid fa-graduation-cap"></i><small>04</small><h3>مناسبات خاصة</h3><p>أعياد ميلاد، تخرج، مناقشات ماجستير وكل مناسبة تستحق ذكرى.</p><button onclick="openBooking('عيد ميلاد')">احجز الخدمة ←</button></article>
+</div></section>
+
+<section class="section reviews" id="reviews"><div class="head reveal"><span>REAL FEEDBACK</span><h2>كلام العملاء ❤️</h2><p>آراء حقيقية من رسائل العملاء — بدون تغيير في مضمون كلامهم.</p></div>
+<div class="slider reveal"><button onclick="changeReview(-1)">›</button><div class="viewport"><div class="track" id="reviewTrack">
+<article><div class="top"><b>“</b><span>★★★★★</span></div><p>بجد تسلم إيدك أنا عاوزة أعيط 😢 مكتتش متخيلة إني هبقى عروسة حلوة كدااا، وبجد تسلم إيدك يا إسلام 😢❤️</p><footer><small>Feedback</small><button onclick="openFeedback(1)">عرض الرسالة الأصلية</button></footer></article>
+<article><div class="top"><b>“</b><span>★★★★★</span></div><p>بخي أقسم بالله أنا ما عارف أقولك إيه على كمية البهجة اللي إنت معيشني فيها بعد ربنا الفترة دي، بس حقيقي من كل قلبي شكراً شكراً شكراً بجد. مبسوط أوي إنك كنت جزء من يومي، ومكنتش أي جزء، ده إنت كنت جزء كبير جداً، وفعلاً كنت عند حسن الظن بيك يخويا 💗💗</p><footer><small>Feedback</small><button onclick="openFeedback(2)">عرض الرسالة الأصلية</button></footer></article>
+<article><div class="top"><b>“</b><span>★★★★★</span></div><p>والله العظيم بجد شغلك حلو أوي تسلم إيدك، أجمل فوتوغرافر في العدلية والله عظمة بجد. أول مرة تعجبني صور بالجمال والحلاوة دي. لا حقيقي شغلك جميل أوي وتعاملك محترم، وهيكون ليا الشرف إني أعمل سيشن الفرح عندك. اللهم بارك تصويرك جميل جداً بجد، شكراً خالص وتسلم إيدك والله على جمال الصور ❤️</p><footer><small>Feedback</small><button onclick="openFeedback(3)">عرض الرسالة الأصلية</button></footer></article>
+<article><div class="top"><b>“</b><span>★★★★★</span></div><p>بسطا تسلم إيدك على صور السيشن، الصور عجبت أسامه والعروسة أوي وبيقولك تسلم يا عالمي 🤍</p><footer><small>Feedback</small><button onclick="openFeedback(4)">عرض الرسالة الأصلية</button></footer></article>
+<article><div class="top"><b>“</b><span>★★★★★</span></div><p>يا بخويا والله الحمدلله إنها تمت على خير ودي أقل حاجة أقسم بالله. بجد كل اللي هقوله إنك إنت اللي فرحتنا، وأقسم بالله يا عم إسلام 💗💗💗💗</p><footer><small>Feedback</small><button onclick="openFeedback(5)">عرض الرسالة الأصلية</button></footer></article>
+</div></div><button onclick="changeReview(1)">‹</button></div><div class="dots" id="reviewDots"></div></section>
+
+<section class="section cta reveal"><div><span>READY?</span><h2>عندك مناسبة؟<br><em>خلينا نوثقها صح.</em></h2><p>اختار نوع المناسبة وسيب الباقي عليّا.</p><button class="gold" onclick="openBooking()">ابدأ الحجز <i class="fa-solid fa-arrow-left"></i></button></div></section>
+
+<section class="section contact" id="contact"><div class="contact-grid"><div class="head reveal"><span>CONTACT</span><h2>اتكلم معايا<br><em>مباشرة.</em></h2><p>للحجز والاستفسار والتفاصيل، اختار الطريقة المناسبة ليك.</p>
+<div class="contacts"><a href="https://wa.me/201210425901" target="_blank"><i class="fa-brands fa-whatsapp"></i><span><small>WhatsApp</small><b>01210425901</b></span></a><button onclick="openCallModal()"><i class="fa-solid fa-phone"></i><span><small>اتصال</small><b>01092217287 / 01210425901</b></span></button><a href="https://www.instagram.com/elmokadem_ph" target="_blank"><i class="fa-brands fa-instagram"></i><span><small>Instagram</small><b>@elmokadem_ph</b></span></a></div></div>
+<div class="contact-card reveal"><div class="nfc"><i class="fa-solid fa-wifi"></i></div><span>ELMOKADEM</span><h3>المقدم فوتوغرافر</h3><p>Photography • Memories • Stories</p><button class="gold" onclick="openBooking()">احجز موعدك</button></div></div></section>
+</main>
+
+<footer><div><b>ELMOKADEM</b><small>المقدم فوتوغرافر</small></div><span>© <span id="year"></span> ELMOKADEM Photography</span><div><a href="https://www.instagram.com/elmokadem_ph">Instagram</a> · <a href="https://www.tiktok.com/@elmokadem.photographar">TikTok</a></div></footer>
+<a class="wa" href="https://wa.me/201210425901" target="_blank"><i class="fa-brands fa-whatsapp"></i><span>تواصل واتساب</span></a>
+
+<div class="modal" id="bookingModal"><div class="backdrop" onclick="closeModal('bookingModal')"></div><div class="box"><button class="x" onclick="closeModal('bookingModal')">×</button><span>BOOKING</span><h2>احجز موعدك</h2><p>املأ البيانات، وبعدها هنكمل التأكيد على واتساب.</p>
+<form onsubmit="submitBooking(event)"><div class="form">
+<label>نوع المناسبة<select id="eventType" required onchange="updateFields()"><option value="">اختار المناسبة</option><option>سيشن زفاف</option><option>سيشن زفاف و قاعة</option><option>سيشن كتب كتاب</option><option>كتب كتاب في البيت</option><option>سيشن خطوبة</option><option>سيشن خطوبة و قاعة</option><option>خطوبة في البيت أو كافيه</option><option>قاعة أو فرح</option><option>سيشن كاجول</option><option>عيد ميلاد</option><option>حفلة تخرج</option><option>مناقشة ماجستير</option></select></label>
+<label>التاريخ<input id="eventDate" type="date" required></label>
+<label class="conditional" id="timeField">الميعاد<select id="homeTime"><option value="">اختار الميعاد</option><option>بعد العصر</option><option>المغرب</option><option>العشاء</option></select></label>
+<label class="conditional" id="addressField">العنوان<input id="eventAddress" placeholder="عنوان البيت أو الكافيه"></label>
+<label class="conditional" id="hallField">اسم القاعة / المكان<input id="hallName" placeholder="اسم القاعة"></label>
+<label class="conditional" id="uniField">الجامعة<input id="university" placeholder="اسم الجامعة"></label>
+<label>الاسم بالكامل<input id="fullName" required placeholder="اسمك بالكامل"></label><label>رقم الموبايل<input id="phone" required inputmode="tel" placeholder="01xxxxxxxxx"></label>
+</div><button class="gold submit" type="submit">تأكيد الحجز عبر واتساب <i class="fa-brands fa-whatsapp"></i></button><div id="status"></div></form></div></div>
+
+<div class="modal" id="callModal"><div class="backdrop" onclick="closeModal('callModal')"></div><div class="box small"><button class="x" onclick="closeModal('callModal')">×</button><span>CALL</span><h2>اختار رقم الاتصال</h2><a class="call" href="tel:01092217287">01092217287</a><a class="call" href="tel:01210425901">01210425901</a></div></div>
+
+<div class="modal" id="feedbackModal"><div class="backdrop" onclick="closeModal('feedbackModal')"></div><div class="feedback"><button class="x" onclick="closeModal('feedbackModal')">×</button><img id="feedbackImage" alt="رسالة عميل أصلية"></div></div>
+<script src="js/app.js"></script>
+</body></html>
